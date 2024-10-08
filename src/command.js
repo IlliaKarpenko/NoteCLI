@@ -10,6 +10,15 @@ yargs(hideBin(process.argv))
   }, (argv) => {
     console.log(argv.note)
   })
+  .command("web [port]", "Launch a website to see the notes", yargs => {
+    return yargs.positional("port", {
+      describe: "Port to bind on",
+      default: 5000,
+      type: "number"
+    })
+  }, async (argv) => {
+    
+  })
   .option("tags", {
     alias: "t",
     type: "string",
