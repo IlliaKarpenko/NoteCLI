@@ -1,0 +1,27 @@
+{
+  "notes": [
+    {
+      "tags": [
+        "important",
+        " urgent"
+      ],
+      "content": "Do the homework",
+      "id": 1730383617003
+    },
+    {
+      "tags": [
+        "food",
+        " shopping"
+      ],
+      "content": "Buy the groceries",
+      "id": 1730383639355
+    },
+    {
+      "tags": [
+        "urgent"
+      ],
+      "content": "Finish the lab report",
+      "id": 1730383658854
+    }
+  ]
+}
