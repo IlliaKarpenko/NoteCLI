@@ -21,6 +21,7 @@ import yargs from 'yargs';
 import { hideBin } from 'yargs/helpers';
 import { findNotes, getAllNotes, newNote, removeAllNotes, removeNote } from './notes.js';
 import { listNotes } from './utils.js';
+import { startServer } from './server.js';
 
 // CLI Command Configuration
 yargs(hideBin(process.argv))
@@ -73,7 +74,8 @@ yargs(hideBin(process.argv))
       type: "number"
     });
   }, async (argv) => {
-    // TODO: Web server functionality
+    const notes = await getAllNotes();
+    startServer(notes, argv.port);
   })
 
   .option("tags", {
